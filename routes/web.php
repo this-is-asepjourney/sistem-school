@@ -9,6 +9,11 @@ Route::get('/', function () {
     return auth()->check() ? redirect()->route('dashboard') : redirect()->route('login');
 })->name('home');
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/password/force-change', [\App\Http\Controllers\Auth\PasswordChangeController::class, 'show'])->name('password.change.force');
+    Route::post('/password/force-change', [\App\Http\Controllers\Auth\PasswordChangeController::class, 'update'])->name('password.update.force');
+});
+
 // ─── Admin Routes ────────────────────────────────────────────────
 Route::middleware(['auth', 'verified', 'role:admin'])
     ->prefix('admin')

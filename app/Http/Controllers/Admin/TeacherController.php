@@ -52,9 +52,11 @@ class TeacherController extends Controller
             $user = User::create([
                 'name' => $validated['name'],
                 'email' => $validated['email'],
+                'username' => $validated['nip'] ?? null,
                 'password' => Hash::make($validated['password']),
                 'role' => 'guru',
                 'is_active' => true,
+                'must_change_password' => true,
             ]);
 
             $teacher = Teacher::create([

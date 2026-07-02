@@ -6,7 +6,8 @@
         </div>
         <div class="flex flex-wrap items-center gap-3">
             <label class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold cursor-pointer shadow-sm transition-all hover:opacity-80"
-                   style="background:white; border:1.5px solid #E8EAED; color:var(--c-medium);">
+                   style="background:white; border:1.5px solid #E8EAED; color:var(--c-medium);"
+                   title="Format Kolom: Nama, NIS, Kelas, Tanggal Lahir, Email, Nomor HP">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--c-muted);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
                 Import CSV
                 <input type="file" id="csv_input" class="hidden" accept=".csv">
